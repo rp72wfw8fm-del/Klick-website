@@ -141,12 +141,12 @@ export default function Home() {
               return (
                 <div 
                   key={idx} 
-                  className={`bg-gradient-to-br ${service.color} text-white p-8 rounded-xl hover:shadow-2xl transition transform hover:scale-105 cursor-pointer group`}
+                  className={`bg-gradient-to-br ${service.color} text-white p-8 rounded-xl hover:shadow-2xl transition transform hover:scale-105 cursor-pointer group flex flex-col h-full`}
                 >
                   <Icon className="w-20 h-20 mb-4 group-hover:scale-110 transition" />
                   <h3 className="text-2xl font-bold mb-2">{service.name}</h3>
-                  <p className="text-gray-100 font-semibold mb-4">{service.description}</p>
-                  <button className="bg-white text-gray-900 px-6 py-2 rounded-lg font-bold hover:bg-gray-100 transition w-full">
+                  <p className="text-gray-100 font-semibold mb-6 flex-grow">{service.description}</p>
+                  <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition w-full text-center">
                     Browse {service.name}
                   </button>
                 </div>
@@ -170,16 +170,13 @@ export default function Home() {
             ].map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div key={idx} className="relative">
-                  <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">
+                <div key={idx} className="flex flex-col items-start">
+                  <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-6">
                     {item.step}
                   </div>
                   <Icon className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                  <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
                   <p className="text-gray-600 text-lg">{item.description}</p>
-                  {idx < 3 && (
-                    <div className="hidden md:block absolute top-8 right-0 transform translate-x-1/2 text-primary text-3xl font-bold">→</div>
-                  )}
                 </div>
               );
             })}
