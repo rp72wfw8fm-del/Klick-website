@@ -6,6 +6,9 @@ import Dashboard from './pages/Dashboard';
 import Admin from './pages/Admin';
 import Blog from './pages/Blog';
 import Support from './pages/Support';
+import SignUp from './pages/SignUp';
+import Login from './pages/Login';
+import Payment from './pages/Payment';
 import './index.css';
 
 function App() {
@@ -16,6 +19,9 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/payment" element={<Payment />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/blog" element={<Blog />} />

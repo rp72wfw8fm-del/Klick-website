@@ -21,7 +21,8 @@ export default function Navigation() {
           <Link to="/dashboard" className="hover:text-primary transition">Dashboard</Link>
           <Link to="/blog" className="hover:text-primary transition">Blog</Link>
           <Link to="/support" className="hover:text-primary transition">Support</Link>
-          <Link to="/admin" className="btn-primary">Admin</Link>
+          <Link to="/login" className="hover:text-primary transition">Sign In</Link>
+          <Link to="/signup" className="btn-primary">Sign Up</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -41,7 +42,8 @@ export default function Navigation() {
             <Link to="/dashboard" className="hover:text-primary transition">Dashboard</Link>
             <Link to="/blog" className="hover:text-primary transition">Blog</Link>
             <Link to="/support" className="hover:text-primary transition">Support</Link>
-            <Link to="/admin" className="btn-primary">Admin</Link>
+            <Link to="/login" className="hover:text-primary transition">Sign In</Link>
+            <Link to="/signup" className="btn-primary">Sign Up</Link>
           </div>
         </div>
       )}
